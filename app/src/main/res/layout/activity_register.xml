@@ -40,18 +40,21 @@
         tools:ignore="MissingConstraints">
 
         <EditText
+            android:id="@+id/editTextUsername"
             android:hint="@string/username"
             android:drawableEnd="@drawable/ic_person"
             android:layout_width="match_parent"
             android:layout_height="60dp"/>
 
         <EditText
+            android:id="@+id/editTextEmail"
             android:hint="@string/email"
             android:drawableEnd="@drawable/ic_mail"
             android:layout_width="match_parent"
             android:layout_height="60dp"/>
 
         <EditText
+            android:id="@+id/editTextPassword"
             android:hint="@string/password"
             android:drawableEnd="@drawable/ic_smart_key"
             android:inputType="textPassword"
@@ -59,6 +62,7 @@
             android:layout_height="60dp"/>
 
         <EditText
+            android:id="@+id/editTextConfirmPassword"
             android:hint="@string/confirm_password"
             android:drawableEnd="@drawable/ic_smart_key"
             android:inputType="textPassword"
@@ -67,7 +71,9 @@
 
     </LinearLayout>
 
-    <Button android:text="@string/sign_up"
+    <Button
+        android:id="@+id/buttonSignUp"
+        android:text="@string/sign_up"
         android:layout_marginBottom="5dp"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="@id/LoginPanel"

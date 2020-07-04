@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "513317463126",
+    "firebase_url": "https://ongoal-c02aa.firebaseio.com",
+    "project_id": "ongoal-c02aa",
+    "storage_bucket": "ongoal-c02aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:513317463126:android:43be5746e5cd7ee75587f7",
+        "android_client_info": {
+          "package_name": "com.example.ongoal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "513317463126-slim04ssp4fh6v4rccdj8b0fseqclqjl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzy8bV6Ao5KAKqnvnFzRqC-fQrcRWMBLk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "513317463126-slim04ssp4fh6v4rccdj8b0fseqclqjl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

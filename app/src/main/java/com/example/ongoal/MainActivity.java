@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
         tvSignUpBottom.setOnClickListener(onClickSignUp());
     }
 
-    private View.OnClickListener onClickSignUp(){
-        return new View.OnClickListener(){
-            public void onClick(View v){
+    private View.OnClickListener onClickSignUp() {
+        return new View.OnClickListener() {
+            public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Register.class);
                 MainActivity.this.startActivity(intent);
             }
