@@ -34,11 +34,12 @@ public class MainActivity extends AppCompatActivity {
         // click listener
 
         CardView cardLogout = findViewById(R.id.cardLogout);
-        cardLogout.setOnClickListener(new CardView.OnClickListener() {
+        cardLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
                 Intent notLogged = new Intent(MainActivity.this, Login.class);
+                startActivity(notLogged);
             }
         });
     }

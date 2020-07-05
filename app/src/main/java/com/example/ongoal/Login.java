@@ -61,8 +61,6 @@ public class Login extends AppCompatActivity {
                 loginUser();
             }
         });
-
-
     }
 
     private void loginUser() {
@@ -86,7 +84,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (!task.isSuccessful()) {
-                    Toast.makeText(Login.this, "Login Error, Please loggin Again", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login.this, "Login Error, Please login Again", Toast.LENGTH_SHORT).show();
                 } else {
                     Intent intentHome = new Intent(Login.this, MainActivity.class);
                     startActivity(intentHome);
