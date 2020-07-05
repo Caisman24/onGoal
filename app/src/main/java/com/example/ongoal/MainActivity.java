@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Objects.requireNonNull(getSupportActionBar()).hide();
+        Objects.requireNonNull(getSupportActionBar()).hide(); //hide header with app name
 
         auth = FirebaseAuth.getInstance();
     }
@@ -28,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         final FirebaseUser currentUser = auth.getCurrentUser();
         if (currentUser == null) {
-            Intent notLogged = new Intent(getApplicationContext(), Login.class);
+            Intent notLogged = new Intent(MainActivity.this, Login.class);
+            startActivity(notLogged);
         }
     }
 }

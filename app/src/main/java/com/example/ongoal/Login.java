@@ -55,6 +55,14 @@ public class Login extends AppCompatActivity {
         };
 
         buttonLogin = findViewById(R.id.buttonLogin);
+        buttonLogin.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loginUser();
+            }
+        });
+
+
     }
 
     private void loginUser() {
