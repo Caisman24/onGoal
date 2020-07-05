@@ -2,8 +2,10 @@ package com.example.ongoal;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -21,6 +23,24 @@ public class MainActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).hide(); //hide header with app name
 
         auth = FirebaseAuth.getInstance();
+
+        CardView cardOnGoingGoal = findViewById(R.id.cardOnGoingGoal);
+        // click listener
+
+        CardView cardNewGoal = findViewById(R.id.cardNewGoal);
+        // click listener
+
+        CardView cardInfoApp = findViewById(R.id.cardInfoApp);
+        // click listener
+
+        CardView cardLogout = findViewById(R.id.cardLogout);
+        cardLogout.setOnClickListener(new CardView.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Intent notLogged = new Intent(MainActivity.this, Login.class);
+            }
+        });
     }
 
     @Override
