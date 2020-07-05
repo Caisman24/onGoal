@@ -1,5 +1,6 @@
 package com.example.ongoal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
@@ -88,7 +89,7 @@ public class Register extends AppCompatActivity {
             return;
         }
 
-        if(!TextUtils.equals(password,confirmPassword)){
+        if (!TextUtils.equals(password, confirmPassword)) {
             editTextConfirmPassword.setError("Password doesn't match");
             editTextConfirmPassword.requestFocus();
             return;
@@ -98,7 +99,8 @@ public class Register extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    Register.this.finish();
+                    Intent intent = new Intent(Register.this, MainActivity.class);
+                    Register.this.startActivity(intent);
                 } else if (task.getException() instanceof FirebaseAuthUserCollisionException) {
                     Toast.makeText(getApplicationContext(), "You are already registered", Toast.LENGTH_SHORT).show();
                 } else {

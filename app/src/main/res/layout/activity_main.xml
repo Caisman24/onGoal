@@ -39,12 +39,14 @@
         tools:ignore="MissingConstraints">
         
         <EditText
+            android:id="@+id/editTextEmail"
             android:hint="@string/email"
             android:drawableEnd="@drawable/ic_mail"
             android:layout_width="match_parent"
             android:layout_height="60dp"/>
 
         <EditText
+            android:id="@+id/editTextPassword"
             android:hint="@string/password"
             android:drawableEnd="@drawable/ic_smart_key"
             android:inputType="textPassword"
@@ -60,7 +62,9 @@
             tools:ignore="RtlHardcoded" />
     </LinearLayout>
     
-    <Button android:text="@string/login"
+    <Button
+        android:id="@+id/buttonLogin"
+        android:text="@string/login"
         android:layout_marginBottom="5dp"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="@id/LoginPanel"
