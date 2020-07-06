@@ -31,7 +31,13 @@ public class MainActivity extends AppCompatActivity {
         // click listener
 
         CardView cardInfoApp = findViewById(R.id.cardInfoApp);
-        // click listener
+        cardInfoApp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent infoApp = new Intent(MainActivity.this, AboutApp.class);
+                startActivity(infoApp);
+            }
+        });
 
         CardView cardLogout = findViewById(R.id.cardLogout);
         cardLogout.setOnClickListener(new View.OnClickListener() {

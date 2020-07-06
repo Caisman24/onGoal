@@ -22,4 +22,13 @@
     <string name="information_about_app">Information about app</string>
     <string name="create_new_goal">Create new goal</string>
     <string name="ongoing_goals">Ongoing goals</string>
+    <string name="city_profile">Arad, Romania</string>
+    <string name="name_profile">Caius Alexandru Suciu</string>
+    <string name="email_person">caiussuciu@gmail.com</string>
+    <string name="phone_profile">+40 753 753 671</string>
+    <string name="phone_vw_pop">Phone</string>
+    <string name="linkedin_profile">caius-alexandru-suciu</string>
+    <string name="linkedin">Linkedin</string>
+    <string name="github_profile">github.com/Caisman24</string>
+    <string name="github">GitHub</string>
 </resources>
