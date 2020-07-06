@@ -20,6 +20,8 @@ public class AboutApp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_app);
         myDialog = new Dialog(this);
+
+        Objects.requireNonNull(getSupportActionBar()).hide(); //hide header with app name
     }
 
     public void ShowPopup(View v) {

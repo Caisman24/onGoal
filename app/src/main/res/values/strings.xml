@@ -31,4 +31,7 @@
     <string name="linkedin">Linkedin</string>
     <string name="github_profile">github.com/Caisman24</string>
     <string name="github">GitHub</string>
+    <string name="show_developer">Show Developer</string>
+    <string name="textAboutApp">onGoal was designed as a tool to keep you on track. The application took birth during the classes within Digital Workshop for Programmers.</string>
+    <string name="textAboutDev">This was designed by Caius Suciu during his second year in university.</string>
 </resources>
