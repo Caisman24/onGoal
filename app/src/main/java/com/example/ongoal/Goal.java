@@ -5,12 +5,7 @@ public class Goal {
     private String data;
     private String goalID;
 
-    public Goal() {
-        this.currentDay = 0;
-        this.numberOfDays = 0;
-        this.data = "default";
-        this.goalID = "default";
-    }
+    public Goal() {}
 
     public Goal(int numberOfDays, String data, String goalID) {
         this.currentDay = 1;

@@ -9,6 +9,8 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.UUID;
+
 public class GoalHandler {
     private static final String TAG = "GoalHandler";
     private Goal currentGoal;
@@ -20,7 +22,7 @@ public class GoalHandler {
     }
 
     public void addGoal() {
-        DocumentReference goalReference = fireStore.collection("goal").document(currentGoal.getGoalID());
+        DocumentReference goalReference = fireStore.collection("goal").document(UUID.randomUUID().toString());
         goalReference.set(currentGoal).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {

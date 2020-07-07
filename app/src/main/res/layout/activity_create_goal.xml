@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/imgCreateGoal"
         android:layout_width="match_parent"
-        android:layout_height="800dp"
+        android:layout_height="730dp"
         android:scaleType="center"
         android:src="@drawable/ic_topheader"
         app:layout_constraintBottom_toBottomOf="parent"

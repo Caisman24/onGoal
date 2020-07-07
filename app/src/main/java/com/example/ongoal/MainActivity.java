@@ -25,7 +25,13 @@ public class MainActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
 
         CardView cardOnGoingGoal = findViewById(R.id.cardOnGoingGoal);
-        // click listener
+        cardOnGoingGoal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent viewGoal = new Intent(MainActivity.this, ViewGoalActivity.class);
+                startActivity(viewGoal);
+            }
+        });
 
         CardView cardNewGoal = findViewById(R.id.cardNewGoal);
         cardNewGoal.setOnClickListener(new View.OnClickListener() {

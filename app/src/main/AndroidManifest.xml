@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CreateGoal"></activity>
+        <activity android:name=".ViewGoalActivity"></activity>
+        <activity android:name=".CreateGoal" />
         <activity
             android:name=".OnGoingGoals"
             android:label="@string/title_activity_on_going_goals"
