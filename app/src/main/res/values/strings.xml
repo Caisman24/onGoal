@@ -34,4 +34,9 @@
     <string name="show_developer">Show Developer</string>
     <string name="textAboutApp">onGoal was designed as a tool to keep you on track. The application took birth during the classes within Digital Workshop for Programmers.</string>
     <string name="textAboutDev">This was designed by Caius Suciu during his second year in university.</string>
+    <string name="title_activity_on_going_goals">OnGoingGoals</string>
+    <string name="create_goal">Create GOAL</string>
+    <string name="question_create_goal">What do you want to accomplish?</string>
+    <string name="number_of_days">Number of days</string>
+    <string name="button_create_goal">Create</string>
 </resources>

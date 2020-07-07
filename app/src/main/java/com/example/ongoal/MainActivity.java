@@ -28,7 +28,13 @@ public class MainActivity extends AppCompatActivity {
         // click listener
 
         CardView cardNewGoal = findViewById(R.id.cardNewGoal);
-        // click listener
+        cardNewGoal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent newGoal = new Intent(MainActivity.this, CreateGoal.class);
+                startActivity(newGoal);
+            }
+        });
 
         CardView cardInfoApp = findViewById(R.id.cardInfoApp);
         cardInfoApp.setOnClickListener(new View.OnClickListener() {
