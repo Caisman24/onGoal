@@ -2,6 +2,9 @@ package com.example.ongoal;
 
 import android.util.Log;
 
+import androidx.annotation.NonNull;
+
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -23,6 +26,12 @@ public class GoalHandler {
             public void onSuccess(Void aVoid) {
                 Log.v(TAG, "Goal created with id: " + currentGoal.getGoalID());
             }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.v(TAG, "Error creating goal: " + e.toString());
+            }
         });
+
     }
 }

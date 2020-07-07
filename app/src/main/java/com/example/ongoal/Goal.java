@@ -9,10 +9,11 @@ public class Goal {
         this.currentDay = 0;
         this.numberOfDays = 0;
         this.data = "default";
+        this.goalID = "default";
     }
 
-    public Goal(int currentDay, int numberOfDays, String data, String goalID) {
-        this.currentDay = currentDay;
+    public Goal(int numberOfDays, String data, String goalID) {
+        this.currentDay = 1;
         this.numberOfDays = numberOfDays;
         this.data = data;
         this.goalID = goalID;
@@ -43,7 +44,7 @@ public class Goal {
     }
 
     public String getData() {
-        return this.getData();
+        return this.data;
     }
 
 }
