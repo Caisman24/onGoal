@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
 import java.util.Objects;
 
-public class Register extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
 
     EditText editTextUsername, editTextEmail, editTextPassword, editTextConfirmPassword;
     private FirebaseAuth mAuth;
@@ -43,7 +43,7 @@ public class Register extends AppCompatActivity {
         TextView tvLogin = findViewById(R.id.tvLogin);
         tvLogin.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Register.this.finish();
+                RegisterActivity.this.finish();
             }
         });
 
@@ -99,8 +99,8 @@ public class Register extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    Intent intent = new Intent(Register.this, MainActivity.class);
-                    Register.this.startActivity(intent);
+                    Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                    RegisterActivity.this.startActivity(intent);
                 } else if (task.getException() instanceof FirebaseAuthUserCollisionException) {
                     Toast.makeText(getApplicationContext(), "You are already registered", Toast.LENGTH_SHORT).show();
                 } else {

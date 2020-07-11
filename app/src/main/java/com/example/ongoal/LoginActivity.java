@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Objects;
 
-public class Login extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     EditText editTextEmail, editTextPassword;
     Button buttonLogin;
     FirebaseAuth auth;
@@ -45,11 +45,11 @@ public class Login extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser firebaseUser = auth.getCurrentUser();
                 if (firebaseUser != null) {
-                    Toast.makeText(Login.this, "You are logged in", Toast.LENGTH_SHORT).show();
-                    Intent intentHome = new Intent(Login.this, MainActivity.class);
+                    Toast.makeText(LoginActivity.this, "You are logged in", Toast.LENGTH_SHORT).show();
+                    Intent intentHome = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intentHome);
                 } else {
-                    Toast.makeText(Login.this, "Please enter your credentials", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Please enter your credentials", Toast.LENGTH_SHORT).show();
                 }
             }
         };
@@ -80,13 +80,13 @@ public class Login extends AppCompatActivity {
         }
 
         // if email and password is not empty
-        auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
+        auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (!task.isSuccessful()) {
-                    Toast.makeText(Login.this, "Login Error, Please login Again", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Login Error, Please login Again", Toast.LENGTH_SHORT).show();
                 } else {
-                    Intent intentHome = new Intent(Login.this, MainActivity.class);
+                    Intent intentHome = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intentHome);
                 }
             }
@@ -97,8 +97,8 @@ public class Login extends AppCompatActivity {
     private View.OnClickListener onClickSignUp() {
         return new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(Login.this, Register.class);
-                Login.this.startActivity(intent);
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                LoginActivity.this.startActivity(intent);
             }
         };
     }

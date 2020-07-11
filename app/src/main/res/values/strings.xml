@@ -39,4 +39,7 @@
     <string name="question_create_goal">What do you want to accomplish?</string>
     <string name="number_of_days">Number of days</string>
     <string name="button_create_goal">Create</string>
+    <string name="title_of_goal">Title of goal</string>
+    <string name="adapter_current_day">Current day</string>
+    <string name="adapter_day_limit">Day limit</string>
 </resources>

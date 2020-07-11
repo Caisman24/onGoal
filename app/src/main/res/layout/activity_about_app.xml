@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/popupBackground"
-    tools:context=".AboutApp">
+    tools:context=".AboutAppActivity">
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_margin="5dp"
+        android:layout_height="@dimen/aboutTitleViewHeight"
+        android:layout_margin="@dimen/aboutTitleViewMargin"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -18,56 +18,54 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/aboutTextViewMarginTop"
         android:text="@string/information_about_app"
         android:textColor="@color/white"
-        android:textSize="23sp"
+        android:textSize="@dimen/aboutTextSize"
         android:textStyle="bold"
         tools:ignore="MissingConstraints" />
-
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp">
+        android:layout_marginStart="@dimen/aboutLayoutMargin"
+        android:layout_marginTop="@dimen/aboutLayoutMarginTop"
+        android:layout_marginEnd="@dimen/aboutLayoutMargin"
+        android:layout_marginBottom="@dimen/aboutLayoutMargin">
 
         <LinearLayout
             android:id="@+id/linearAbout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="@dimen/aboutLayoutMarginTop"
             android:gravity="center">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxWidth="90dip"
+                android:maxWidth="@dimen/aboutMaxTextWidth"
                 android:text="@string/textAboutApp"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="16sp"/>
+                android:textSize="@dimen/aboutContentTextSize" />
         </LinearLayout>
-
 
         <LinearLayout
             android:id="@+id/linearDeveloper"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/linearAbout"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="@dimen/aboutSecondMarginTop"
             android:gravity="center">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxWidth="90dip"
+                android:maxWidth="@dimen/aboutMaxTextWidth"
                 android:text="@string/textAboutDev"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:textSize="@dimen/aboutContentTextSize" />
         </LinearLayout>
 
         <LinearLayout
@@ -75,7 +73,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/linearDeveloper"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="@dimen/aboutLayoutMarginTop"
             android:gravity="center">
 
             <Button
@@ -89,7 +87,6 @@
                 tools:ignore="MissingConstraints" />
 
         </LinearLayout>
-
 
     </RelativeLayout>
 

@@ -11,7 +11,7 @@ import android.widget.Button;
 
 import java.util.Objects;
 
-public class AboutApp extends AppCompatActivity {
+public class AboutAppActivity extends AppCompatActivity {
 
     Dialog myDialog;
 

@@ -21,12 +21,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Large Text"
+                android:text="@string/title_of_goal"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/adapterMarginTop"
                 android:layout_height="wrap_content"
                 android:gravity="center">
 
@@ -34,17 +34,17 @@
                     android:id="@+id/textGoalNumberOfDay"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Large Text"
-                    android:layout_marginEnd="50dp"
-                    android:textSize="15sp" />
+                    android:text="@string/adapter_current_day"
+                    android:layout_marginEnd="@dimen/adapterMargin"
+                    android:textSize="@dimen/adapterTextSize" />
 
                 <TextView
                     android:id="@+id/textGoalDayLimit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="15sp"
-                    android:layout_marginStart="50dp"
-                    android:text="Large Text" />
+                    android:textSize="@dimen/adapterTextSize"
+                    android:layout_marginStart="@dimen/adapterMargin"
+                    android:text="@string/adapter_day_limit" />
             </LinearLayout>
 
         </LinearLayout>

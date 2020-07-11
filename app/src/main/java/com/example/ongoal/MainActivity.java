@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         cardNewGoal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent newGoal = new Intent(MainActivity.this, CreateGoal.class);
+                Intent newGoal = new Intent(MainActivity.this, CreateGoalActivity.class);
                 startActivity(newGoal);
             }
         });
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         cardInfoApp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent infoApp = new Intent(MainActivity.this, AboutApp.class);
+                Intent infoApp = new Intent(MainActivity.this, AboutAppActivity.class);
                 startActivity(infoApp);
             }
         });
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
-                Intent notLogged = new Intent(MainActivity.this, Login.class);
+                Intent notLogged = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(notLogged);
             }
         });
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         final FirebaseUser currentUser = auth.getCurrentUser();
         if (currentUser == null) {
-            Intent notLogged = new Intent(MainActivity.this, Login.class);
+            Intent notLogged = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(notLogged);
         }
     }

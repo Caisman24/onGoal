@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="350dp"
-    android:layout_height="545dp"
+    android:layout_width="@dimen/popupWidth"
+    android:layout_height="@dimen/popupHeight"
     android:layout_gravity="center"
     android:background="@color/popupBackground"
     android:orientation="vertical">
 
     <Button
         android:id="@+id/buttonClosePopup"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_margin="5dp"
+        android:layout_width="@dimen/popupExit"
+        android:layout_height="@dimen/popupExit"
+        android:layout_margin="@dimen/popupExitMargin"
         android:background="@drawable/ic_close_menu" />
 
     <LinearLayout
@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/popupMarginTop"
             android:text="@string/name_profile"
             android:textColor="@color/white"
             android:textStyle="bold" />
@@ -38,7 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/popupMarginTop"
             android:text="@string/city_profile"
             android:textColor="@color/white" />
     </LinearLayout>
@@ -46,16 +46,16 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/popupInfoMarginTop"
         android:background="@color/white">
 
         <LinearLayout
             android:id="@+id/popupEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginLeft="@dimen/popupInfoMargin"
+            android:layout_marginTop="@dimen/popupInfoSecondMarginTop"
+            android:layout_marginRight="@dimen/popupInfoMargin"
             android:orientation="vertical"
             tools:ignore="UselessParent">
 
@@ -64,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/email"
                 android:textColor="@color/popupBackground"
-                android:textSize="13sp" />
+                android:textSize="@dimen/popupInfoTitleSize" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -72,12 +72,12 @@
                 android:fontFamily="sans-serif-light"
                 android:text="@string/email_person"
                 android:textColor="#000000"
-                android:textSize="17sp" />
+                android:textSize="@dimen/popupInfoTextSize" />
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="@dimen/popupInfoViewHeight"
+                android:layout_marginTop="@dimen/popupInfoMarginTop"
                 android:background="@android:color/darker_gray" />
 
         </LinearLayout>
@@ -87,9 +87,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/popupEmail"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginLeft="@dimen/popupInfoMargin"
+            android:layout_marginTop="@dimen/popupInfoSecondMarginTop"
+            android:layout_marginRight="@dimen/popupInfoMargin"
             android:orientation="vertical">
 
             <TextView
@@ -97,7 +97,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/phone_vw_pop"
                 android:textColor="@color/popupBackground"
-                android:textSize="13sp" />
+                android:textSize="@dimen/popupInfoTitleSize" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -105,12 +105,12 @@
                 android:fontFamily="sans-serif-light"
                 android:text="@string/phone_profile"
                 android:textColor="#000000"
-                android:textSize="17sp" />
+                android:textSize="@dimen/popupInfoTextSize" />
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="@dimen/popupInfoViewHeight"
+                android:layout_marginTop="@dimen/popupInfoMarginTop"
                 android:background="@android:color/darker_gray" />
 
         </LinearLayout>
@@ -120,10 +120,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/popupPhone"
-
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginLeft="@dimen/popupInfoMargin"
+            android:layout_marginTop="@dimen/popupInfoSecondMarginTop"
+            android:layout_marginRight="@dimen/popupInfoMargin"
             android:orientation="vertical">
 
             <TextView
@@ -131,7 +130,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/linkedin"
                 android:textColor="@color/popupBackground"
-                android:textSize="13sp" />
+                android:textSize="@dimen/popupInfoTitleSize" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -139,12 +138,12 @@
                 android:fontFamily="sans-serif-light"
                 android:text="@string/linkedin_profile"
                 android:textColor="#000000"
-                android:textSize="17sp" />
+                android:textSize="@dimen/popupInfoTextSize" />
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="@dimen/popupInfoViewHeight"
+                android:layout_marginTop="@dimen/popupInfoMarginTop"
                 android:background="@android:color/darker_gray" />
 
         </LinearLayout>
@@ -153,9 +152,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/popupLinkedin"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginLeft="@dimen/popupInfoMargin"
+            android:layout_marginTop="@dimen/popupInfoSecondMarginTop"
+            android:layout_marginRight="@dimen/popupInfoMargin"
             android:orientation="vertical">
 
             <TextView
@@ -163,7 +162,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/github"
                 android:textColor="@color/popupBackground"
-                android:textSize="13sp" />
+                android:textSize="@dimen/popupInfoTitleSize" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -171,12 +170,12 @@
                 android:fontFamily="sans-serif-light"
                 android:text="@string/github_profile"
                 android:textColor="#000000"
-                android:textSize="17sp" />
+                android:textSize="@dimen/popupInfoTextSize" />
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="@dimen/popupInfoViewHeight"
+                android:layout_marginTop="@dimen/popupInfoMarginTop"
                 android:background="@android:color/darker_gray" />
 
         </LinearLayout>

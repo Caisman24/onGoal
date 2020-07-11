@@ -14,7 +14,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Objects;
 
-public class CreateGoal extends AppCompatActivity {
+public class CreateGoalActivity extends AppCompatActivity {
 
     private EditText editTextView1, editTextView2;
     private Button buttonCreateGoal;
@@ -44,7 +44,7 @@ public class CreateGoal extends AppCompatActivity {
                         currentGoal = new Goal(Integer.parseInt(editTextView2.getText().toString()), editTextView1.getText().toString(), user.getUid());
                         goalHandler = new GoalHandler(currentGoal);
                         goalHandler.addGoal();
-                        Intent finishActivity = new Intent(CreateGoal.this, MainActivity.class);
+                        Intent finishActivity = new Intent(CreateGoalActivity.this, MainActivity.class);
                         startActivity(finishActivity);
                     } else
                         editTextView2.setError("Please enter only digits");

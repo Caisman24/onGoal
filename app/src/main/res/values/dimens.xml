@@ -1,3 +1,65 @@
 <resources>
+    // Dimensions for REGISTER AND LOGIN ACTIVITY
+    // Logo dimensions
+    <dimen name="loginLogoPadding">10dp</dimen>
+    <dimen name="loginLogoHeight">150dp</dimen>
+    // Panel dimensions
+    <dimen name="loginShapePanelHeight">480dp</dimen>
+    <dimen name="loginShapePanelWidth">220dp</dimen>
+    <dimen name="registerShapePanelHeight">520dp</dimen>
+    // Box details dimensions
+    <dimen name="loginBoxHeight">350dp</dimen>
+    <dimen name="loginBoxMarginTop">60dp</dimen>
+    <dimen name="loginBoxPadding">50dp</dimen>
+    <dimen name="loginBoxPaddingTop">70dp</dimen>
+    <dimen name="loginEditTextHeight">60dp</dimen>
+    <dimen name="loginResetPassMarginTop">15dp</dimen>
+    <dimen name="registerBoxHeight">400dp</dimen>
+    // Button dimensions
+    <dimen name="loginButtonWidth">150dp</dimen>
+    <dimen name="loginButtonHeight">50dp</dimen>
+    <dimen name="loginButtonMarginBottom">5dp</dimen>
+    <dimen name="loginTextViewMarginStart">40dp</dimen>
+    <dimen name="loginTextSize">20sp</dimen>
+    // Bottom padding
+    <dimen name="loginBottomPadding">20dp</dimen>
+    <dimen name="loginBottomTextMarginStart">15dp</dimen>
+
+    // About app activity
+    // Title view
+    <dimen name="aboutTitleViewHeight">120dp</dimen>
+    <dimen name="aboutTitleViewMargin">5dp</dimen>
+    <dimen name="aboutTextViewMarginTop">20dp</dimen>
+    <dimen name="aboutTextSize">23sp</dimen>
+    //Content view
+    <dimen name="aboutLayoutMargin">20dp</dimen>
+    <dimen name="aboutLayoutMarginTop">100dp</dimen>
+    <dimen name="aboutMaxTextWidth">90dp</dimen>
+    <dimen name="aboutContentTextSize">16sp</dimen>
+    //2nd Content view
+    <dimen name="aboutSecondMarginTop">50dp</dimen>
+
+    // Popup Activity for About app
+    // Layout dimensions
+    <dimen name="popupHeight">545dp</dimen>
+    <dimen name="popupWidth">350dp</dimen>
+    <dimen name="popupExit">30dp</dimen>
+    <dimen name="popupExitMargin">5dp</dimen>
+    <dimen name="popupMarginTop">5dp</dimen>
+    //Information about Developer
+    <dimen name="popupInfoMarginTop">10dp</dimen>
+    <dimen name="popupInfoMargin">30dp</dimen>
+    <dimen name="popupInfoSecondMarginTop">15dp</dimen>
+    <dimen name="popupInfoTitleSize">13sp</dimen>
+    <dimen name="popupInfoTextSize">17sp</dimen>
+    <dimen name="popupInfoViewHeight">1dp</dimen>
+
+    //List adapter layout dimensions
+    <dimen name="adapterMarginTop">10dp</dimen>
+    <dimen name="adapterMargin">50dp</dimen>
+    <dimen name="adapterTextSize">15sp</dimen>
+
+    // Default values
     <dimen name="fab_margin">16dp</dimen>
+
 </resources>
