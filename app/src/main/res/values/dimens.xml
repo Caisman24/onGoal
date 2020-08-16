@@ -2,16 +2,16 @@
     // Dimensions for REGISTER AND LOGIN ACTIVITY
     // Logo dimensions
     <dimen name="loginLogoPadding">10dp</dimen>
-    <dimen name="loginLogoHeight">150dp</dimen>
+    <dimen name="loginLogoHeight">100dp</dimen>
     // Panel dimensions
     <dimen name="loginShapePanelHeight">480dp</dimen>
     <dimen name="loginShapePanelWidth">220dp</dimen>
     <dimen name="registerShapePanelHeight">520dp</dimen>
     // Box details dimensions
-    <dimen name="loginBoxHeight">350dp</dimen>
+    <dimen name="loginBoxHeight">200dp</dimen>
     <dimen name="loginBoxMarginTop">60dp</dimen>
-    <dimen name="loginBoxPadding">50dp</dimen>
-    <dimen name="loginBoxPaddingTop">70dp</dimen>
+    <dimen name="loginBoxPadding">20dp</dimen>
+    <dimen name="loginBoxPaddingTop">20dp</dimen>
     <dimen name="loginEditTextHeight">60dp</dimen>
     <dimen name="loginResetPassMarginTop">15dp</dimen>
     <dimen name="registerBoxHeight">400dp</dimen>

@@ -13,9 +13,10 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/loginLogoHeight"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="80dp"
         android:padding="@dimen/loginLogoPadding"
         android:src="@drawable/icon_brand"
+        app:layout_constraintBottom_toTopOf="@+id/textLogo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,104 +34,81 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/welcome"
+        android:id="@+id/getStartedSignUPTXT"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="15dp"
+        android:layout_marginBottom="1dp"
         android:gravity="center"
-        android:text="Welcome"
+        android:text="@string/sign_up"
+        android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="25sp"
+        android:textSize="30sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/getStartedSignUPTXT2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@id/textLogo" />
 
     <TextView
-        android:id="@id/welcome2"
+        android:id="@id/getStartedSignUPTXT2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="15dp"
         android:gravity="center"
-        android:text="Log in to access your account"
+        android:text="It's easier to sign up now"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcome" />
-
-    <EditText
-        android:id="@+id/editTextEmail"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="15dp"
-        android:background="@drawable/custom_input"
-        android:drawableStart="@drawable/ic_baseline_email_24"
-        android:drawablePadding="12dp"
-        android:ems="10"
-        android:hint="Email Address"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:textColorHint="#1d232f"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcome2" />
-
-    <EditText
-        android:id="@+id/editTextPassword"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="15dp"
-        android:background="@drawable/custom_input"
-        android:drawableStart="@drawable/ic_baseline_lock_24"
-        android:drawablePadding="12dp"
-        android:ems="10"
-        android:hint="Password"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:textColorHint="#1d232f"
-        android:textSize="15sp"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+        app:layout_constraintTop_toBottomOf="@id/getStartedSignUPTXT" />
 
     <Button
-        android:id="@+id/buttonLogin"
+        android:id="@+id/buttonSignFacebook"
+        style="@style/LoginFacebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="20dp"
+        android:text="Continue with Facebook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getStartedSignUPTXT2" />
+
+    <Button
+        android:id="@+id/buttonRegister"
         style="@style/ButtonSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="35dp"
         android:background="@drawable/shape_login_button"
-        android:text="@string/login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
-
-    <TextView
-        android:id="@+id/tvSignUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="15dp"
-        android:gravity="center"
-        android:padding="@dimen/loginBottomPadding"
-        android:text="@string/sign_up_bottom"
-        android:textColor="@color/white"
+        android:text="I'll use email or phone"
+        android:textAllCaps="false"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonSignFacebook" />
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="60dp"
+        android:gravity="center"
+        android:text="Not the first time here? Log in."
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonRegister" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

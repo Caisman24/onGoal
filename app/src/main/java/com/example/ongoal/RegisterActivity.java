@@ -1,11 +1,15 @@
 package com.example.ongoal;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,8 +27,10 @@ import java.util.Objects;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    EditText editTextUsername, editTextEmail, editTextPassword, editTextConfirmPassword;
+    EditText editTextUsername, editTextEmail, editTextPassword;
     private FirebaseAuth mAuth;
+    Dialog myDialog;
+    CheckBox checkBoxTermsOfService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +42,6 @@ public class RegisterActivity extends AppCompatActivity {
         editTextUsername = findViewById(R.id.editTextUsername);
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextPassword = findViewById(R.id.editTextPassword);
-        editTextConfirmPassword = findViewById(R.id.editTextConfirmPassword);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -55,13 +60,22 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
+        myDialog = new Dialog(this);
+        checkBoxTermsOfService = findViewById(R.id.checkBox);
+        checkBoxTermsOfService.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    showPopup(findViewById(android.R.id.content).getRootView());
+                }
+            }
+        });
     }
 
     private void registerUser() {
         String username = editTextUsername.getText().toString().trim();
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
-        String confirmPassword = editTextConfirmPassword.getText().toString().trim();
 
         if (username.isEmpty()) {
             editTextUsername.setError("Username is required");
@@ -89,9 +103,9 @@ public class RegisterActivity extends AppCompatActivity {
             return;
         }
 
-        if (!TextUtils.equals(password, confirmPassword)) {
-            editTextConfirmPassword.setError("Password doesn't match");
-            editTextConfirmPassword.requestFocus();
+        if (!checkBoxTermsOfService.isChecked()){
+            checkBoxTermsOfService.setError("Accept Terms and Conditions");
+            checkBoxTermsOfService.requestFocus();
             return;
         }
 
@@ -108,5 +122,30 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void showPopup(View v) {
+        myDialog.setContentView(R.layout.popup_terms_of_service);
+        Button buttonDecline = myDialog.findViewById(R.id.buttonDecline);
+        buttonDecline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkBoxTermsOfService.setChecked(false);
+                myDialog.dismiss();
+            }
+        });
+
+        Button buttonAccept = myDialog.findViewById(R.id.buttonAccept);
+        buttonAccept.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkBoxTermsOfService.setChecked(true);
+                myDialog.dismiss();
+            }
+        });
+
+        checkBoxTermsOfService.setChecked(false);
+        Objects.requireNonNull(getSupportActionBar()).hide(); //hide header with app name
+        myDialog.show();
     }
 }

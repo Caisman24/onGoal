@@ -63,11 +63,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onStart() {
+    protected void onStart() { // when you start app and it returns to get started
         super.onStart();
         final FirebaseUser currentUser = auth.getCurrentUser();
         if (currentUser == null) {
-            Intent notLogged = new Intent(MainActivity.this, LoginActivity.class);
+            Intent notLogged = new Intent(MainActivity.this, GetStartedActivity.class);
             startActivity(notLogged);
         }
     }

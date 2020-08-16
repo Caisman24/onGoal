@@ -32,9 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).hide();
 
         TextView tvSignUp = findViewById(R.id.tvSignUp);
-        TextView tvSignUpBottom = findViewById(R.id.tvSignUpBottom);
         tvSignUp.setOnClickListener(onClickSignUp());
-        tvSignUpBottom.setOnClickListener(onClickSignUp());
 
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextPassword = findViewById(R.id.editTextPassword);

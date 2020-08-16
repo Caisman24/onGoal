@@ -8,4 +8,8 @@
     <color name="blueLight">#49acd5</color>
     <color name="popupBackground">#2f333f</color>
     <color name="white">#FFFFFF</color>
+    <color name="loginBackground">#e7ebed</color>
+    <color name="colorSetUp">#000000</color>
+    <color name="backgroundThemeColor">#1d232f</color>
+    <color name="snow">#242c3b</color>
 </resources>

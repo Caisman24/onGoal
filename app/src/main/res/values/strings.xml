@@ -1,14 +1,17 @@
 <resources>
     <string name="app_name">onGoal</string>
-    <string name="don_t_have_an_account">Don\'t have an account?</string>
-    <string name="sign_up">SIGN UP</string>
+    <string name="don_t_have_an_account">First time here?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_up_bottom">First time here? Sign up.</string>
+    <string name="login_bottom">Not the first time here? Log in</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="forgot_password">Forgot password?</string>
-    <string name="login">Login</string>
+    <string name="login">Log in</string>
     <string name="username">Username</string>
     <string name="confirm_password">Confirm password</string>
     <string name="title_activity_login">Login</string>
+
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -42,4 +45,10 @@
     <string name="title_of_goal">Title of goal</string>
     <string name="adapter_current_day">Current day</string>
     <string name="adapter_day_limit">Day limit</string>
+
+    <string name="termsText1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic</string>
+    <string name="termsText2">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</string>
+    <string name="termsText3">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English. </string>
+
+    <string name="terms_and_conditions_checkbox">I agree with the <u>Terms and Conditions</u> </string>
 </resources>
