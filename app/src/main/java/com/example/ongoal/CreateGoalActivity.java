@@ -32,7 +32,6 @@ public class CreateGoalActivity extends AppCompatActivity {
         editTextView2 = findViewById(R.id.editNumberofDays);
         buttonCreateGoal = findViewById(R.id.buttonCreateGoal);
 
-
         buttonCreateGoal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

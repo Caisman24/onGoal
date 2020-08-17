@@ -23,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText editTextEmail, editTextPassword;
     Button buttonLogin;
     FirebaseAuth auth;
+    TextView tvForgotPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +60,9 @@ public class LoginActivity extends AppCompatActivity {
                 loginUser();
             }
         });
+
+        tvForgotPassword = findViewById(R.id.forgotPassword);
+        tvForgotPassword.setOnClickListener(onClickForgotPassword());
     }
 
     private void loginUser() {
@@ -95,8 +99,18 @@ public class LoginActivity extends AppCompatActivity {
     private View.OnClickListener onClickSignUp() {
         return new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-                LoginActivity.this.startActivity(intent);
+                Intent registerUserIntent = new Intent(LoginActivity.this, RegisterActivity.class);
+                LoginActivity.this.startActivity(registerUserIntent);
+            }
+        };
+    }
+
+    private View.OnClickListener onClickForgotPassword() {
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent forgotPasswordIntent = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
+                LoginActivity.this.startActivity(forgotPasswordIntent);
             }
         };
     }

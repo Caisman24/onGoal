@@ -144,7 +144,6 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-        checkBoxTermsOfService.setChecked(false);
         Objects.requireNonNull(getSupportActionBar()).hide(); //hide header with app name
         myDialog.show();
     }
