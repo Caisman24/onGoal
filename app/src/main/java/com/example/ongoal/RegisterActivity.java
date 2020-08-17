@@ -4,6 +4,8 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Patterns;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +13,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,11 +34,14 @@ public class RegisterActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     Dialog myDialog;
     CheckBox checkBoxTermsOfService;
+    boolean booleanShowPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        booleanShowPassword = true;
 
         Objects.requireNonNull(getSupportActionBar()).hide(); //hide header with app name
 
@@ -48,7 +54,8 @@ public class RegisterActivity extends AppCompatActivity {
         TextView tvLogin = findViewById(R.id.tvLogin);
         tvLogin.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                RegisterActivity.this.finish();
+                Intent logInIntent = new Intent(RegisterActivity.this, LoginActivity.class);
+                RegisterActivity.this.startActivity(logInIntent);
             }
         });
 
@@ -70,6 +77,8 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             }
         });
+
+        onClickShowPassword();
     }
 
     private void registerUser() {
@@ -103,7 +112,7 @@ public class RegisterActivity extends AppCompatActivity {
             return;
         }
 
-        if (!checkBoxTermsOfService.isChecked()){
+        if (!checkBoxTermsOfService.isChecked()) {
             checkBoxTermsOfService.setError("Accept Terms and Conditions");
             checkBoxTermsOfService.requestFocus();
             return;
@@ -146,5 +155,25 @@ public class RegisterActivity extends AppCompatActivity {
 
         Objects.requireNonNull(getSupportActionBar()).hide(); //hide header with app name
         myDialog.show();
+    }
+
+    private void onClickShowPassword() {
+        final ImageView imageShowPassword = findViewById(R.id.imageShowPassword);
+        imageShowPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (booleanShowPassword) {
+                    editTextPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    imageShowPassword.setImageDrawable(getResources().getDrawable(R.drawable.ic_round_eye_24));
+                    editTextPassword.setSelection(editTextPassword.getText().length());
+                    booleanShowPassword = false;
+                } else {
+                    editTextPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    imageShowPassword.setImageDrawable(getResources().getDrawable(R.drawable.ic_baseline_visibility_off_24px));
+                    editTextPassword.setSelection(editTextPassword.getText().length());
+                    booleanShowPassword = true;
+                }
+            }
+        });
     }
 }

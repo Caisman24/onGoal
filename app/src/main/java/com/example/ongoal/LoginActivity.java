@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,11 +27,14 @@ public class LoginActivity extends AppCompatActivity {
     Button buttonLogin;
     FirebaseAuth auth;
     TextView tvForgotPassword;
+    boolean booleanShowPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        booleanShowPassword = true;
 
         Objects.requireNonNull(getSupportActionBar()).hide();
 
@@ -63,6 +69,8 @@ public class LoginActivity extends AppCompatActivity {
 
         tvForgotPassword = findViewById(R.id.forgotPassword);
         tvForgotPassword.setOnClickListener(onClickForgotPassword());
+
+        onClickShowPassword();
     }
 
     private void loginUser() {
@@ -113,5 +121,25 @@ public class LoginActivity extends AppCompatActivity {
                 LoginActivity.this.startActivity(forgotPasswordIntent);
             }
         };
+    }
+
+    private void onClickShowPassword() {
+        final ImageView imageShowPassword = findViewById(R.id.imageShowPassword);
+        imageShowPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (booleanShowPassword) {
+                    editTextPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    imageShowPassword.setImageDrawable(getResources().getDrawable(R.drawable.ic_round_eye_24));
+                    editTextPassword.setSelection(editTextPassword.getText().length());
+                    booleanShowPassword = false;
+                } else {
+                    editTextPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    imageShowPassword.setImageDrawable(getResources().getDrawable(R.drawable.ic_baseline_visibility_off_24px));
+                    editTextPassword.setSelection(editTextPassword.getText().length());
+                    booleanShowPassword = true;
+                }
+            }
+        });
     }
 }
